@@ -1,0 +1,66 @@
+<ion-view view-title="Gerar Relatório">
+
+  <ion-content>
+
+    <form class="list" name="expenseForm">
+
+      <label class="item item-input item-floating-label">
+        <span class="input-label positive">Projeto</span>
+        <input type="text" placeholder="Projeto" ng-model="pdf.project">
+      </label>
+
+      <label class="item item-input item-floating-label">
+        <span class="input-label positive">Cliente</span>
+        <input type="text" placeholder="Cliente" ng-model="pdf.client">
+      </label>
+
+      <label class="item item-input item-floating-label">
+        <span class="input-label positive">Consultor</span>
+        <input type="text" placeholder="Consultor" ng-model="pdf.consultant">
+      </label>
+
+      <label class="item item-input item-stacked-label">
+
+        <span class="input-label positive">Período</span>
+        <label class="item item-input positive" style="margin-right: 20px">
+          <span class="input-label">De</span>
+          <input type="date"
+                 max="{{today | date:'yyyy-MM-dd'}}"
+                 placeholder="De" ng-model="pdf.periodFrom">
+        </label>
+        <label class="item item-input positive" style="margin-right: 20px">
+          <span class="input-label">Até</span>
+          <input type="date"
+                 min="{{pdf.periodFrom | date:'yyyy-MM-dd'}}"
+                 max="{{today | date:'yyyy-MM-dd'}}"
+                 ng-show="pdf.periodFrom"
+                 placeholder="Até" ng-model="pdf.periodTo">
+        </label>
+
+
+      </label>
+
+      <label class="item item-input item-floating-label">
+        <span class="input-label positive">Banco/Agência/C.C</span>
+        <input type="text" placeholder="Banco/Agência/C.C" ng-model="pdf.bankInformation">
+      </label>
+
+      <label class="item item-input item-floating-label">
+        <span class="input-label positive">CPF</span>
+        <input type="tel" placeholder="CPF" ng-model="pdf.cpf" ui-br-cpf-mask>
+      </label>
+
+      <label class="item item-input item-floating-label">
+        <span class="input-label positive">Valor de Adiantamento</span>
+        <input type="tel" placeholder="Valor de Adiantamento" ng-model="pdf.fowardValue" ui-money-mask>
+      </label>
+
+    </form>
+
+    <button class="button button-block button-positive" ng-click="saveClicked()">
+      Gerar PDF
+    </button>
+
+  </ion-content>
+
+</ion-view>

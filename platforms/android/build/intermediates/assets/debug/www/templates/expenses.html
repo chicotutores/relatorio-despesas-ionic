@@ -1,0 +1,23 @@
+<ion-view view-title="Despesas">
+  <ion-floating-menu menu-icon-color="#fff" menu-color="#387ef5" menu-open-color="#387ef5" menu-icon="ion-chevron-up" menu-open-icon="ion-chevron-down">
+    <ion-floating-item click="addExpense()" icon="ion-plus" button-color="#387ef5"></ion-floating-item>
+    <ion-floating-item click="clearExpenses()" icon="ion-close" button-color="#387ef5"></ion-floating-item>
+    <ion-floating-item click="createPdf()" icon="ion-email" button-color="#387ef5"></ion-floating-item>
+  </ion-floating-menu>
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-thumbnail-left item-text-wrap" ng-repeat="expense in expenses track by $index">
+        <img ng-src="{{expense.photo_url}}">
+        <h2>{{expense.type}}
+          <span class="item-note">
+          {{expense.value | currency}}
+          </span>
+        </h2>
+        <p>{{expense.date}}</p>
+        <ion-option-button class="button-assertive" ng-click="removeExpense($index)">
+          Deletar
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

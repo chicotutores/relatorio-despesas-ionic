@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/dosglas/Development/iFactory/relatorio-desesas-ionic/platforms/android/build/intermediates/res/merged/debug/drawable-land-xxhdpi-v4/screen.png",
+        "source": "/Users/dosglas/Development/iFactory/relatorio-desesas-ionic/platforms/android/res/drawable-land-xxhdpi/screen.png"
+    },
+    {
+        "merged": "/Users/douglas_nunes/Downloads/RelatorioDespesas/platforms/android/build/intermediates/res/merged/debug/drawable-land-xxhdpi-v4/screen.png",
+        "source": "/Users/douglas_nunes/Downloads/RelatorioDespesas/platforms/android/res/drawable-land-xxhdpi/screen.png"
+    },
+    {
+        "merged": "/Users/douglas_nunes/Downloads/RelatorioDespesas/C:\\Users\\douglas.nunes\\Documents\\Development\\iFactory\\RelatorioDespesas\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-land-xxhdpi-v4\\screen.png",
+        "source": "/Users/douglas_nunes/Downloads/RelatorioDespesas/C:\\Users\\douglas.nunes\\Documents\\Development\\iFactory\\RelatorioDespesas\\platforms\\android\\res\\drawable-land-xxhdpi\\screen.png"
+    }
+]

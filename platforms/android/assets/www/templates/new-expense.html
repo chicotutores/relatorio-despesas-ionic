@@ -1,0 +1,38 @@
+<ion-view view-title="Adicionar Despesa">
+  <ion-content>
+    <form class="list" name="expenseForm">
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Tipo
+        </div>
+        <select>
+          <option>Estacionamento e Pedágio</option>
+          <option>Frigobar</option>
+          <option>KM - Quilometragem</option>
+          <option>Lavanderia</option>
+          <option>Café da manha</option>
+          <option>Refeição</option>
+          <option>Transporte</option>
+          <option>Telefone</option>
+        </select>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label positive">Valor</span>
+        <input type="tel" placeholder="Valor" ng-model="expense.value" ui-money-mask>
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label positive">Data</span>
+        <input type="date" data-date-format="DD/MMMM/YYYY" placeholder="Data" ng-model="expense.data">
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label positive">Observações</span>
+        <input type="text" placeholder="Observações" ng-model="expense.obs">
+      </label>
+    </form>
+    <img class="expense-image" ng-show="expense.image !== undefined" ng-src="{{'data:image/jpeg;base64,' + expense.image}}">
+    <button class="button" ng-click="takePicture()">Tirar foto</button>
+    <button class="button button-block button-positive" ng-click="saveExpense()">
+      Salvar
+    </button>
+  </ion-content>
+</ion-view>
